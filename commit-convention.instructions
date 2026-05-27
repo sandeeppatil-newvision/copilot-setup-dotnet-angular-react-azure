@@ -1,0 +1,55 @@
+# Commit Message Style Guide
+
+This file teaches Copilot how to write team-style commit messages.
+
+## Format
+Use Conventional Commits-style formatting:
+
+`<type>(<scope>): <short description>`
+
+- `type` examples: `feat`, `fix`, `chore`, `docs`, `style`, `refactor`, `test`, `perf`, `build`, `ci`
+- `scope` is optional but should be used when the change affects a specific area (for example: `orders`, `auth`, `ui`, `api`)
+- `short description` should be concise, in present tense, and start with a lowercase verb.
+
+## Rules
+- Keep the commit summary under 72 characters when possible.
+- Use a single line summary only unless a body is needed for context.
+- Do not use generic messages such as `Update file`, `Fix issue`, or `Changes`.
+- Prefer clear, descriptive summaries like:
+  - `feat(orders): add bulk order creation with validation`
+  - `fix(auth): correct token refresh logic`
+  - `docs(api): add usage examples for webhook endpoint`
+
+## When to include a body
+Include a body only when the change needs additional explanation:
+
+- Why the change was made
+- What changed in a non-obvious way
+- Any migration or compatibility notes
+
+Example body format:
+
+```
+fix(payment): resolve rounding error on checkout
+
+The checkout amount was being rounded incorrectly for mixed-currency orders.
+Adjusted rounding logic and added regression tests.
+```
+
+## Best practice
+- Use `feat` for new features
+- Use `fix` for bug fixes
+- Use `chore` for maintenance tasks
+- Use `docs` for documentation only
+- Use `refactor` for code changes that do not change behavior
+- Use `test` for adding or updating tests
+- Use `perf` for performance improvements
+- Use `ci` for CI/CD configuration changes
+- Use `build` for build-related changes
+
+## Examples
+- `feat(orders): add bulk order creation with validation`
+- `fix(cart): prevent duplicate items on add`
+- `refactor(ui): simplify checkout button component`
+- `docs(readme): clarify setup steps for local development`
+- `test(api): add coverage for error responses`

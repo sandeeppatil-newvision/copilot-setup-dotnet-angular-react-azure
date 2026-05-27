@@ -1,1 +1,0 @@
-# copilot-setup-dotnet-angular-react-azure
